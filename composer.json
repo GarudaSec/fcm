@@ -1,0 +1,32 @@
+{
+    "name": "bratasena/fcm",
+    "description": "A package for internal KSPPS BMT MITRA UMAT",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bratasena",
+            "email": "affandyart46@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Bratasena\\Fcm\\":"src/"
+        },
+        "files" : [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bratasena\\Fcm\\FcmServiceProvider"
+            ],
+            "aliases" : {
+                "Fcm": "Bratasena\\Fcm\\FcmFacade"
+            }
+        }
+    }
+}
